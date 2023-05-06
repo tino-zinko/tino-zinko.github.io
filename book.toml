@@ -1,0 +1,6 @@
+[book]
+authors = ["tino-zinko"]
+language = "en"
+multilingual = false
+src = "src"
+title = "人工知能ちゃん"
