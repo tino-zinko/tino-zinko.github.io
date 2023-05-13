@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
 
-mdbook build && cp -r web book
+set -ex
+
+mdbook build
+command rm -rf docs
+mkdir docs
+cp -r book/* docs/
+cp -r web/ docs/
 
