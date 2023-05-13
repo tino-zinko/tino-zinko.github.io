@@ -2,7 +2,8 @@ name: mdbook
 
 on:
     push:
-        branches: [master]
+        #         branches: [master]
+        branches: [nothing]
 
 permissions:
     contents: write
