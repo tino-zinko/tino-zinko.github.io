@@ -1,4 +1,4 @@
-最終更新日: 2024/05/26
+最終更新日: 2024/06/06
 
 # 1. リンク
 
@@ -145,4 +145,8 @@ A. 基準は非公開ですが、現時点ではかなり緩い設定です。�
 Q. バグを発見しましたが、どうすれば良いですか
 
 A. TwitteのDMにてご連絡いただけると大変助かります。枠内のコメントでのバグ報告は気付けないことが多いです。
+
+# 5. 問い合わせ (意見や要望など)
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfBQ3Pgjo-YV3vY7dy2JwVsSckVCLp7Snl5K9AOLp1z3YztFg/viewform?embedded=true" width="340" height="495" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
