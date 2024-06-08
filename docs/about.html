@@ -159,7 +159,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p>最終更新日: 2024/06/06</p>
+                        <p>最終更新日: 2024/06/08</p>
 <h1 id="1-リンク"><a class="header" href="#1-リンク">1. リンク</a></h1>
 <ul>
 <li>
@@ -285,7 +285,22 @@
 <p><code>/hot</code>: 返答のランダム度を増す</p>
 </li>
 </ul>
-<h2 id="34-それ以外のコマンド"><a class="header" href="#34-それ以外のコマンド">3.4 それ以外のコマンド</a></h2>
+<h2 id="34-ユーザーの設定に関するコマンド"><a class="header" href="#34-ユーザーの設定に関するコマンド">3.4 ユーザーの設定に関するコマンド</a></h2>
+<ul>
+<li>
+<p><code>/nickname [名前]</code>: ニックネーム(呼び名)を設定する(例えば<code>/nickname うさぎちゃん</code>とする)</p>
+</li>
+<li>
+<p><code>/nickname</code>: ニックネーム(呼び名)をリセットする</p>
+</li>
+<li>
+<p><code>/default [他のコマンド]</code>: デフォルトのボイス設定を変更する(実行した枠でのみ有効。例えば<code>/default /zundamon /echo</code>とする)</p>
+</li>
+<li>
+<p><code>/default</code>: デフォルトのボイス設定をリセットする</p>
+</li>
+</ul>
+<h2 id="35-それ以外のコマンド"><a class="header" href="#35-それ以外のコマンド">3.5 それ以外のコマンド</a></h2>
 <ul>
 <li>
 <p><code>/bgm</code>: 枠のBGMを一時的に変更する</p>
@@ -303,18 +318,14 @@
 <p><code>/ranking</code>: ランキング上位5人の情報を表示する</p>
 </li>
 <li>
-<p><code>/default [他のコマンド]</code>: デフォルトのボイス設定を変更する(実行した枠でのみ有効。例えば<code>/default /zundamon /echo</code>とする)</p>
-</li>
-<li>
-<p><code>/default</code>: デフォルトのボイス設定をリセットする</p>
-</li>
-<li>
 <p><code>/prog [文字列]</code>: プログラムを実行できるかも？</p>
 </li>
 </ul>
 <h1 id="4-よくある質問"><a class="header" href="#4-よくある質問">4. よくある質問</a></h1>
 <p>Q. いつまで配信しますか</p>
 <p>A. 現時点では24時間365日配信しています。 <!-- 1日あたり500円程度(1ヶ月あたり2万円程度)の維持費が発生しているため、突然やめる可能性があります。 --></p>
+<p>Q. ユーザー名の漢字の読み方がおかしいです</p>
+<p>A. <code>/nickname</code>コマンドで呼び名を設定できます。例えば<code>/nickname うさぎちゃん</code>とすると、<code>うさぎちゃん</code>と呼ばれるようになります。</p>
 <p>Q. 回答が<code>ERROR</code>となる条件は何ですか</p>
 <p>A. AIの内部でエラーが発生したときに<code>ERROR</code>と表示されます。時間をおいて同じ質問をすると正しい回答が得られる場合があります。</p>
 <p>Q. 突然喋らなくなるときがありますが、なぜですか</p>
