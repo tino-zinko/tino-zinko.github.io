@@ -1,5 +1,11 @@
 最終更新日: 2024/06/14 ([変更履歴](./release_notes.md))
 
+# 0. 稼働ステータス
+
+<div id='tino_zinko_status'>ステータス: 読み込み中...</div>
+
+※ 稼働ステータスはリアルタイムに更新されており、ページ上部の「最終更新日」とは必ずしも一致しません
+
 # 1. リンク
 
 - [Spoon](https://www.spooncast.net/jp/profile/315396782/board/dj?t=all)
