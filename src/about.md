@@ -1,4 +1,4 @@
-最終更新日: 2024/06/26 ([変更履歴](./release_notes.md))
+最終更新日: 2024/06/27 ([変更履歴](./release_notes.md))
 
 # 0. 稼働ステータス
 
@@ -60,6 +60,14 @@
 
 ## 3.2 声の種類に関するコマンド
 
+- `/metan`
+
+- `/metan_2`
+
+- `/metan_3`
+
+- `/metan_4`
+
 - `/zundamon`
 
 - `/zundamon_2`
@@ -70,6 +78,10 @@
 
 - `/zundamon_5`
 
+- `/zundamon_6`
+
+- `/zundamon_7`
+
 - `/asmr`
 
 - `/sayo`
@@ -79,6 +91,8 @@
 - `/himari`
 
 - `/nurse`
+
+- `/nurse_2`
 
 - `/nurse_asmr`
 
