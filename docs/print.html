@@ -160,7 +160,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p>最終更新日: 2024/07/01 (<a href="./release_notes.html">変更履歴</a>)</p>
+                        <p>最終更新日: 2024/07/04 (<a href="./release_notes.html">変更履歴</a>)</p>
 <h1 id="0-稼働ステータス"><a class="header" href="#0-稼働ステータス">0. 稼働ステータス</a></h1>
 <div id='tino_zinko_status'>ステータス: 読み込み中...</div>
 <p>※ 稼働ステータスはリアルタイムに更新されており、ページ上部の「最終更新日」とは必ずしも一致しません</p>
@@ -388,6 +388,45 @@
 <li>
 <p><code>/prog [文字列]</code>: プログラムを実行できるかも？</p>
 </li>
+<li>
+<p><code>/ban [ユーザーID]</code>: 指定したユーザーを強制退室させる(例えば<code>/ban @wnp5pqx5</code>とする。<code>@wnp5pqx5</code>のような<code>[ユーザーID]</code>の部分は、ユーザーのプロフィールページに飛ぶことで確認が可能です)</p>
+  <details>
+  <summary><code>/ban</code>の詳しい使い方</summary>
+<ul>
+<li>
+<p>このコマンドの目的</p>
+<ul>
+<li>
+<p><font color='red'>「そのユーザーが枠にいることで、70%以上のユーザーが不快になりそう」と思われる場合にのみ使用してください(過度な下ネタ、過度な暴言、無関係な宣伝の連投など)</font></p>
+</li>
+<li>
+<p>使用するか少しでも迷うような状況では、使用せずに、TwitterのDMや問い合わせフォームからご連絡いただけると助かります</p>
+</li>
+<li>
+<p>繰り返し入退室しているという理由だけで使用することはお控えください(電波が悪いだけの可能性があります)</p>
+</li>
+<li>
+<p>コメントの内容に問題が無い場合は、連投しているという理由だけで使用することはお控えください(単にコメントをたくさん打つ方の可能性があります)</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>/ban</code>を実行したことで即座に強制退室とはならず、投票制が採用されています</p>
+<p>例えば、Aさんが<code>/ban</code>を実行した場合、それは1票となり、同じユーザーに対してBさんが<code>/ban</code>を実行すれば、それは2票目と判定されます</p>
+<p>実際に強制退室となるまでに必要な票数はBANされるユーザーの滞在時間によって変動しますが、最低でも2票は必要です</p>
+</li>
+<li>
+<p><code>/ban</code>を使用できるのは、滞在時間が50時間以上のユーザーのみです</p>
+</li>
+<li>
+<p><code>/ban</code>の対象にできるのは、滞在時間が50時間未満で、かつ現在の枠に来たことのあるユーザーのみです(過去の枠は不可)</p>
+</li>
+<li>
+<p>自分自身を<code>/ban</code>の対象にすることはできません</p>
+</li>
+</ul>
+  </details>
+</li>
 </ul>
 <h1 id="4-よくある質問"><a class="header" href="#4-よくある質問">4. よくある質問</a></h1>
 <p>Q. いつまで配信しますか</p>
@@ -412,6 +451,10 @@
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfBQ3Pgjo-YV3vY7dy2JwVsSckVCLp7Snl5K9AOLp1z3YztFg/viewform?embedded=true" width="340" height="495" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="release-notes"><a class="header" href="#release-notes">Release Notes</a></h1>
 <p>上に記載があるものほど新しいバージョンです</p>
+<h2 id="v027-20240704"><a class="header" href="#v027-20240704">v027 (2024/07/04)</a></h2>
+<ul>
+<li><code>/ban</code>の追加</li>
+</ul>
 <h2 id="v026-20240701"><a class="header" href="#v026-20240701">v026 (2024/07/01)</a></h2>
 <ul>
 <li><code>/stat</code>の追加</li>
