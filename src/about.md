@@ -160,7 +160,7 @@
 
 - `/nickname`: ニックネーム(呼び名)をリセットする <!-- `/nickname2`も同義 -->
 
-- `/default [他のコマンド]`: デフォルトのボイス設定を変更する(実行した枠でのみ有効。例えば`/default /zundamon /echo`とする)
+- `/default [他のコマンド]`: デフォルトのボイス設定を変更する(例えば`/default /zundamon /echo`とする)
 
 - `/default`: デフォルトのボイス設定をリセットする
 
