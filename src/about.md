@@ -1,4 +1,4 @@
-最終更新日: 2024/07/09 ([変更履歴](./release_notes.md))
+最終更新日: 2024/07/17 ([変更履歴](./release_notes.md))
 
 # 0. 稼働ステータス
 
@@ -79,8 +79,6 @@
 - `/zundamon_5`
 
 - `/zundamon_6`
-
-- `/zundamon_7`
 
 - `/asmr`
 
@@ -164,7 +162,7 @@
 
 - `/heart_comment`: ハーコメをリセットする
 
-- `/default [他のコマンド]`: デフォルトのボイス設定を変更する(例えば`/default /zundamon /echo`とする)
+- `/default [他のコマンド]`: デフォルトのボイス設定を変更する(例えば`/default /zundamon`とする。`/echo`, `/high`, `/slow`といったエフェクトは記録されません)
 
 - `/default`: デフォルトのボイス設定をリセットする
 
