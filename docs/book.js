@@ -693,7 +693,7 @@ function playground_text(playground, hidden = true) {
     "use strict";
 
     window.addEventListener('load', () => {
-        const isTinoZinkoStatusError = false;
+        const isTinoZinkoStatusError = true;
 
         const placeholder = document.querySelector('#tino_zinko_status');
         if (!isTinoZinkoStatusError) {
