@@ -841,3 +841,23 @@ aria-label="Show hidden lines"></button>';
         document.addEventListener('scroll', updateBorder, { passive: true });
     })();
 })();
+
+//mine {
+
+(function () {
+    "use strict";
+
+    window.addEventListener('load', () => {
+        const isTinoZinkoStatusError = false;
+
+        const placeholder = document.querySelector('#tino_zinko_status');
+        if (!isTinoZinkoStatusError) {
+            placeholder.innerHTML = `ステータス: 🟢 <font color='green'>正常</font>`;
+        } else {
+            placeholder.innerHTML = `ステータス: 🔴 <font color='red'>停止中(原因調査中)</font>`;
+        }
+    });
+
+})();
+
+//mine }
