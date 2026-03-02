@@ -1,58 +1,69 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js ayu">
+<html lang="en" class="ayu sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>About - 人工知能ちゃん</title>
 
-<head>
-    <!-- Book generated using mdBook -->
-    <meta charset="UTF-8">
-    <title>About - 人工知能ちゃん</title>
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@TinoZinko" />
+        <meta name="twitter:title" content="人工知能ちゃんの使い方" />
+        <meta name="twitter:description" content="隠しコマンドやランキングの仕様について" />
+        <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1449759379209666560/jg4DGiFN_400x400.jpg" />
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-2459343d.css">
+        <link rel="stylesheet" href="css/chrome-ae938929.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
 
 
-    <!-- Custom HTML head -->
-
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#ffffff" />
-
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@TinoZinko" />
-    <meta name="twitter:title" content="人工知能ちゃんの使い方" />
-    <meta name="twitter:description" content="隠しコマンドやランキングの仕様について" />
-    <meta name="twitter:image"
-        content="https://pbs.twimg.com/profile_images/1449759379209666560/jg4DGiFN_400x400.jpg" />
-
-    <link rel="icon" href="favicon.svg">
-    <link rel="shortcut icon" href="favicon.png">
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/chrome.css">
-    <link rel="stylesheet" href="css/print.css" media="print">
-
-    <!-- Fonts -->
-    <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-    <link rel="stylesheet" href="fonts/fonts.css">
-
-    <!-- Highlight.js Stylesheets -->
-    <link rel="stylesheet" href="highlight.css">
-    <link rel="stylesheet" href="tomorrow-night.css">
-    <link rel="stylesheet" href="ayu-highlight.css">
-
-    <!-- Custom theme stylesheets -->
-
-</head>
-
-<body>
-    <div id="body-container">
-        <!-- Provide site root to javascript -->
+        <!-- Provide site root and default themes to javascript -->
         <script>
-            var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "ayu";
+            const path_to_root = "";
+            const default_light_theme = "ayu";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-67051b51.js";
         </script>
-
+        <!-- Start loading toc.js asap -->
+        <script src="toc-ee131863.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
             try {
-                var theme = localStorage.getItem('mdbook-theme');
-                var sidebar = localStorage.getItem('mdbook-sidebar');
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
 
                 if (theme.startsWith('"') && theme.endsWith('"')) {
                     localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
@@ -61,68 +72,74 @@
                 if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
                     localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
                 }
-            } catch (e) {}
+            } catch (e) { }
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script>
-            var theme;
-            try {theme = localStorage.getItem('mdbook-theme');} catch (e) {}
-            if (theme === null || theme === undefined) {theme = default_theme;}
-            var html = document.querySelector('html');
-            html.classList.remove('no-js')
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
             html.classList.remove('ayu')
             html.classList.add(theme);
-            html.classList.add('js');
+            html.classList.add("js");
         </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var html = document.querySelector('html');
-            var sidebar = null;
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
-                try {sidebar = localStorage.getItem('mdbook-sidebar');} catch (e) {}
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
             } else {
                 sidebar = 'hidden';
+                sidebar_toggle.checked = false;
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
         </script>
 
-        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="about.html"><strong aria-hidden="true">1.</strong> About</a></li><li class="chapter-item expanded "><a href="release_notes.html"><strong aria-hidden="true">2.</strong> Release Notes</a></li><li class="chapter-item expanded "><a href="licenses.html"><strong aria-hidden="true">3.</strong> Licenses</a></li><li class="chapter-item expanded "><a href="contact.html"><strong aria-hidden="true">4.</strong> Contact</a></li></ol>
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
-        <div id="page-wrapper" class="page-wrapper">
+        <div id="mdbook-page-wrapper" class="page-wrapper">
 
             <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
-                            aria-label="Toggle Table of Contents" aria-controls="sidebar">
-                            <i class="fa fa-bars"></i>
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
                         </button>
-                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme"
-                            aria-label="Change theme" aria-haspopup="true" aria-expanded="false"
-                            aria-controls="theme-list">
-                            <i class="fa fa-paint-brush"></i>
-                        </button>
-                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
                         </ul>
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
-                            aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S"
-                            aria-controls="searchbar">
-                            <i class="fa fa-search"></i>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
                         </button>
                     </div>
 
@@ -130,38 +147,43 @@
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
-                            <i id="print-button" class="fa fa-print"></i>
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
                         </a>
 
                     </div>
                 </div>
 
-                <div id="search-wrapper" class="hidden">
-                    <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..."
-                            aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
                     </form>
-                    <div id="searchresults-outer" class="searchresults-outer hidden">
-                        <div id="searchresults-header" class="searchresults-header"></div>
-                        <ul id="searchresults">
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
                         </ul>
                     </div>
                 </div>
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script>
-                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
-                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
-                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
                         link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
                     });
                 </script>
 
-                <div id="content" class="content">
+                <div id="mdbook-content" class="content">
                     <main>
-                        <p>最終更新日: 2025/11/20 (<a href="./release_notes.html">変更履歴</a>)</p>
+                        <p>最終更新日: 2026/03/02 (<a href="./release_notes.html">変更履歴</a>)</p>
 <h1 id="0-稼働ステータス"><a class="header" href="#0-稼働ステータス">0. 稼働ステータス</a></h1>
-<div id='tino_zinko_status'>ステータス: 読み込み中...</div>
+<div id="tino_zinko_status">ステータス: 読み込み中...</div>
+
 <p>※ 稼働ステータスはリアルタイムに更新されており、ページ上部の「最終更新日」とは必ずしも一致しません</p>
 <h1 id="1-問い合わせ-意見や要望など"><a class="header" href="#1-問い合わせ-意見や要望など">1. 問い合わせ (意見や要望など)</a></h1>
 <p>返信が必要な場合はXのDMまでお願いします</p>
@@ -186,116 +208,116 @@
 <p>コマンドには、大きく分けて以下の二種類があります</p>
 <ul>
 <li>
-<p><code>/echo こんにちは</code>や<code>/asmr こんにちは</code>のように、テキストと併用するコマンド</p>
+<p><code>@echo こんにちは</code>や<code>@asmr こんにちは</code>のように、テキストと併用するコマンド</p>
 </li>
 <li>
-<p><code>/bgm</code>や<code>/fortune</code>のように、単体で使用するコマンド</p>
+<p><code>@bgm</code>や<code>@fortune</code>のように、単体で使用するコマンド</p>
 </li>
 </ul>
-<p>コマンド一覧は<code>/help</code>で確認できますが、以下に示すように隠しコマンドがあります</p>
-<p><code>/echo /asmr こんにちは</code>のように、複数のコマンドをスペースで区切って指定することも可能です</p>
+<p>コマンド一覧は<code>@help</code>で確認できますが、以下に示すように隠しコマンドがあります</p>
+<p><code>@echo @asmr こんにちは</code>のように、複数のコマンドをスペースで区切って指定することも可能です</p>
 <h2 id="31-声のエフェクトに関するコマンド"><a class="header" href="#31-声のエフェクトに関するコマンド">3.1 声のエフェクトに関するコマンド</a></h2>
 <ul>
 <li>
-<p><code>/echo</code>: エコーをかける</p>
+<p><code>@echo</code>: エコーをかける</p>
 </li>
 <li>
-<p><code>/asmr</code>: ASMR風にする</p>
+<p><code>@asmr</code>: ASMR風にする</p>
 </li>
 <li>
-<p><code>/high</code>: 声を高くする</p>
+<p><code>@high</code>: 声を高くする</p>
 </li>
 <li>
-<p><code>/low</code>: 声を低くする</p>
+<p><code>@low</code>: 声を低くする</p>
 </li>
 <li>
-<p><code>/fast</code>: 早口にする</p>
+<p><code>@fast</code>: 早口にする</p>
 </li>
 <li>
-<p><code>/slow</code>: 遅口にする</p>
+<p><code>@slow</code>: 遅口にする</p>
 </li>
 <li>
-<p><code>/silent</code>: 読み上げを行わない</p>
+<p><code>@silent</code>: 読み上げを行わない</p>
 </li>
 </ul>
 <h2 id="32-声の種類に関するコマンド"><a class="header" href="#32-声の種類に関するコマンド">3.2 声の種類に関するコマンド</a></h2>
 <ul>
 <li>
-<p><code>/metan</code>, <code>/metan_2</code>, <code>/metan_3</code>, <code>/metan_4</code>,</p>
+<p><code>@metan</code>, <code>@metan_2</code>, <code>@metan_3</code>, <code>@metan_4</code>,</p>
 </li>
 <li>
-<p><code>/zundamon</code>, <code>/zundamon_2</code>, <code>/zundamon_3</code>, <code>/zundamon_4</code>, <code>/zundamon_5</code>, <code>/zundamon_6</code></p>
+<p><code>@zundamon</code>, <code>@zundamon_2</code>, <code>@zundamon_3</code>, <code>@zundamon_4</code>, <code>@zundamon_5</code>, <code>@zundamon_6</code></p>
 </li>
 <li>
-<p><code>/asmr</code></p>
+<p><code>@asmr</code></p>
 </li>
 <li>
-<p><code>/sayo</code></p>
+<p><code>@sayo</code></p>
 </li>
 <li>
-<p><code>/tsumugi</code></p>
+<p><code>@tsumugi</code></p>
 </li>
 <li>
-<p><code>/himari</code></p>
+<p><code>@himari</code></p>
 </li>
 <li>
-<p><code>/nurse</code>, <code>/nurse_2</code>, <code>/nurse_asmr</code></p>
+<p><code>@nurse</code>, <code>@nurse_2</code>, <code>@nurse_asmr</code></p>
 </li>
 <li>
-<p><code>/bii</code>, <code>/bii_calm</code>, <code>/bii_shy</code></p>
+<p><code>@bii</code>, <code>@bii_calm</code>, <code>@bii_shy</code></p>
 </li>
 <li>
-<p><code>/usagi</code>, <code>/usagi_2</code>, <code>/usagi_3</code>, <code>/usagi_4</code></p>
+<p><code>@usagi</code>, <code>@usagi_2</code>, <code>@usagi_3</code>, <code>@usagi_4</code></p>
 </li>
 </ul>
 <h2 id="33-返答に関するコマンド"><a class="header" href="#33-返答に関するコマンド">3.3 返答に関するコマンド</a></h2>
 <ul>
-<li><code>/long</code>: 返答の文字数上限を2倍にする</li>
+<li><code>@long</code>: 返答の文字数上限を2倍にする</li>
 </ul>
 <!--
 
-- `/wise`: 返答を賢くする(返答の精度を向上させる)
+- `@wise`: 返答を賢くする(返答の精度を向上させる)
 
-- `/memory`: 直前の会話を記憶した状態で、今回のコメントに返答する
+- `@memory`: 直前の会話を記憶した状態で、今回のコメントに返答する
 
     <details>
     
-    <summary><code>/memory</code>の詳しい使い方</summary>
+    <summary><code>@memory</code>の詳しい使い方</summary>
 
-    `/memory`が付いているかに関係無く、全ての会話は記録されています
+    `@memory`が付いているかに関係無く、全ての会話は記録されています
 
     ただし、記録されているだけで、コメントに返信する際には一切使われていません
 
-    `/memory`を付けると、その記録のうち、直前の一つの会話を踏まえてコメントに返答するようになります
+    `@memory`を付けると、その記録のうち、直前の一つの会話を踏まえてコメントに返答するようになります
 
-    - ある話題で会話を続けたい場合は、話題を設定する1回目のコメントでは`/memory`を付けず、それ以降では`/memory`を付けると良いです
+    - ある話題で会話を続けたい場合は、話題を設定する1回目のコメントでは`@memory`を付けず、それ以降では`@memory`を付けると良いです
 
         ```
-        (`/memory`を付けずに話題を設定する)
+        (`@memory`を付けずに話題を設定する)
         うさぎちゃん: 今日は雨が降っています
         人工知能ちゃん: そうなんですね
 
-        (それ以降は、`/memory`を付ける)
-        うさぎちゃん: /memory 今日の天気はどうですか
+        (それ以降は、`@memory`を付ける)
+        うさぎちゃん: @memory 今日の天気はどうですか
         人工知能ちゃん: 雨が降っているようですね
         ```
 
-    - 同様に、話題を変えたい場合は、`/memory`を付けない状態で話題を設定し、それ以降のコメントでは`/memory`を付けると良いです
+    - 同様に、話題を変えたい場合は、`@memory`を付けない状態で話題を設定し、それ以降のコメントでは`@memory`を付けると良いです
 
     </details>
 
 -->
 <ul>
 <li>
-<p><code>/hot</code>: 返答のランダム度を増す</p>
+<p><code>@hot</code>: 返答のランダム度を増す</p>
 </li>
 <li>
-<p><code>/ignore</code>: 返答を行わない</p>
+<p><code>@ignore</code>: 返答を行わない</p>
 </li>
 </ul>
 <h2 id="34-ユーザーの設定に関するコマンド"><a class="header" href="#34-ユーザーの設定に関するコマンド">3.4 ユーザーの設定に関するコマンド</a></h2>
 <ul>
-<li><code>/nickname [名前]</code>: ニックネーム(呼び名)を設定する(例えば<code>/nickname うさぎちゃん</code>とする。<code>[名前]</code>は30文字以内)</li>
+<li><code>@nickname [名前]</code>: ニックネーム(呼び名)を設定する(例えば<code>@nickname うさぎちゃん</code>とする。<code>[名前]</code>は30文字以内)</li>
 </ul>
 <!--
     - あくまで呼び名を設定するためのコマンドであるため、不適切な使用があった場合は、ユーザー単位でコマンドの使用を制限する可能性があります
@@ -304,67 +326,67 @@
 -->
 <ul>
 <li>
-<p><code>/nickname2 [名前]</code>: 同上だが、敬称の部分まで上書きする(例えば<code>/nickname ねこちゃん</code>としたとき、「ねこちゃんさん」と呼ばれるようになるが、<code>/nickname2 ねこちゃん</code>とすると、単に「ねこちゃん」と呼ばれるようになる)</p>
+<p><code>@nickname2 [名前]</code>: 同上だが、敬称の部分まで上書きする(例えば<code>@nickname ねこちゃん</code>としたとき、「ねこちゃんさん」と呼ばれるようになるが、<code>@nickname2 ねこちゃん</code>とすると、単に「ねこちゃん」と呼ばれるようになる)</p>
 </li>
 <li>
-<p><code>/nickname</code>: ニックネーム(呼び名)をリセットする <!-- `/nickname2`も同義 --></p>
+<p><code>@nickname</code>: ニックネーム(呼び名)をリセットする <!-- `@nickname2`も同義 --></p>
 </li>
 <li>
-<p><code>/heart_comment [文字列]</code>: ハーコメを設定する(例えば<code>/heart_comment ハートせんきゅー</code>とする。<code>[文字列]</code>は30文字以内で、「ハート」という文字列を含む必要があります。時間ハートだけでなく、バスターやルーレットハートにも適用されます)</p>
+<p><code>@heart_comment [文字列]</code>: ハーコメを設定する(例えば<code>@heart_comment ハートせんきゅー</code>とする。<code>[文字列]</code>は30文字以内で、「ハート」という文字列を含む必要があります。時間ハートだけでなく、バスターやルーレットハートにも適用されます)</p>
 </li>
 <li>
-<p><code>/heart_comment</code>: ハーコメをリセットする</p>
+<p><code>@heart_comment</code>: ハーコメをリセットする</p>
 </li>
 <li>
-<p><code>/default [他のコマンド]</code>: デフォルトのボイス設定を変更する(例えば<code>/default /zundamon</code>とする。<code>/echo</code>, <code>/high</code>, <code>/slow</code>といったエフェクトは記録されません)</p>
+<p><code>@default [他のコマンド]</code>: デフォルトのボイス設定を変更する(例えば<code>@default @zundamon</code>とする。<code>@echo</code>, <code>@high</code>, <code>@slow</code>といったエフェクトは記録されません)</p>
 </li>
 <li>
-<p><code>/default</code>: デフォルトのボイス設定をリセットする</p>
+<p><code>@default</code>: デフォルトのボイス設定をリセットする</p>
 </li>
 </ul>
 <h2 id="35-それ以外のコマンド"><a class="header" href="#35-それ以外のコマンド">3.5 それ以外のコマンド</a></h2>
 <ul>
 <li>
-<p><code>/bgm</code>: 枠のBGMを一時的に変更する(ランダムなBGMが選ばれる)</p>
+<p><code>@bgm</code>: 枠のBGMを一時的に変更する(ランダムなBGMが選ばれる)</p>
 </li>
 <li>
-<p><code>/bgm [数字]</code>: 同上だが、BGMを指定できる(例えば<code>/bgm 3</code>とする)</p>
+<p><code>@bgm [数字]</code>: 同上だが、BGMを指定できる(例えば<code>@bgm 3</code>とする)</p>
 </li>
 <li>
-<p><code>/fortune</code>: 占いをする</p>
+<p><code>@fortune</code>: 占いをする</p>
 </li>
 <li>
-<p><code>/alarm [数字]</code>: アラームを鳴らす(例えば<code>/alarm 10</code>は10分後にアラームを鳴らす)</p>
+<p><code>@alarm [数字]</code>: アラームを鳴らす(例えば<code>@alarm 10</code>は10分後にアラームを鳴らす)</p>
 </li>
 <li>
-<p><code>/alarm heart</code>: 次にハートを押せる時間になったらアラームを鳴らす(<code>/alarm [数字]</code>と同様に一回切り。10分毎に繰り返しアラームといった機能はありません)</p>
+<p><code>@alarm heart</code>: 次にハートを押せる時間になったらアラームを鳴らす(<code>@alarm [数字]</code>と同様に一回切り。10分毎に繰り返しアラームといった機能はありません)</p>
 </li>
 <li>
-<p><code>アラーム</code>: <code>/alarm heart</code>と同義(頻繁に使用されるので、入力しやすいショートカットを用意しました。スラッシュ<code>/</code>は不要です)</p>
+<p><code>アラーム</code>: <code>@alarm heart</code>と同義(頻繁に使用されるので、入力しやすいショートカットを用意しました。アットマーク<code>@</code>は不要です)</p>
 </li>
 <li>
-<p><code>/rank</code>: 自分のランキングを表示する</p>
+<p><code>@rank</code>: 自分のランキングを表示する</p>
 </li>
 <li>
-<p><code>/ranking</code>: ランキング上位5人の情報を表示する</p>
+<p><code>@ranking</code>: ランキング上位5人の情報を表示する</p>
 </li>
 <li>
-<p><code>/stat</code>: 自分の累計ハート数などの統計情報を表示する(ここで表示されるハート数は「時間ハート」(10分毎に送れるハート)のみで、「バスター」は含まれません)</p>
+<p><code>@stat</code>: 自分の累計ハート数などの統計情報を表示する(ここで表示されるハート数は「時間ハート」(10分毎に送れるハート)のみで、「バスター」は含まれません)</p>
 </li>
 <li>
-<p><code>/event</code>: 現在開催中の公式イベントに関する情報を表示する</p>
+<p><code>@event</code>: 現在開催中の公式イベントに関する情報を表示する</p>
 </li>
 <li>
-<p><code>/report [文字列]</code>: 運営に通知を送信する(例えば<code>/report 荒らしがいるので強制退室にしてほしい</code>とする。確認まで時間を要する場合があります)</p>
+<p><code>@report [文字列]</code>: 運営に通知を送信する(例えば<code>@report 荒らしがいるので強制退室にしてほしい</code>とする。確認まで時間を要する場合があります)</p>
 </li>
 </ul>
 <!--
 
-- `/ban [ユーザーID]`: 指定したユーザーを強制退室させる(例えば`/ban @wnp5pqx5`とする。`@wnp5pqx5`のような`[ユーザーID]`の部分は、ユーザーのプロフィールページに飛ぶことで確認が可能です)
+- `@ban [ユーザーID]`: 指定したユーザーを強制退室させる(例えば`@ban @wnp5pqx5`とする。`@wnp5pqx5`のような`[ユーザーID]`の部分は、ユーザーのプロフィールページに飛ぶことで確認が可能です)
 
     <details>
     
-    <summary><code>/ban</code>の詳しい使い方</summary>
+    <summary><code>@ban</code>の詳しい使い方</summary>
 
     - このコマンドの目的
 
@@ -376,17 +398,17 @@
 
         - コメントの内容に問題が無い場合は、連投しているという理由だけで使用することはお控えください(単にコメントをたくさん打つ方の可能性があります)
 
-    - `/ban`を実行したことで即座に強制退室とはならず、投票制が採用されています
+    - `@ban`を実行したことで即座に強制退室とはならず、投票制が採用されています
 
-        例えば、Aさんが`/ban`を実行した場合、それは1票となり、同じユーザーに対してBさんが`/ban`を実行すれば、それは2票目と判定されます
+        例えば、Aさんが`@ban`を実行した場合、それは1票となり、同じユーザーに対してBさんが`@ban`を実行すれば、それは2票目と判定されます
 
         実際に強制退室となるまでに必要な票数はBANされるユーザーの滞在時間によって変動しますが、最低でも2票は必要です
 
-    - `/ban`を使用できるのは、滞在時間が50時間以上のユーザーのみです
+    - `@ban`を使用できるのは、滞在時間が50時間以上のユーザーのみです
 
-    - `/ban`の対象にできるのは、滞在時間が50時間未満で、かつ現在の枠に来たことのあるユーザーのみです(過去の枠は不可)
+    - `@ban`の対象にできるのは、滞在時間が50時間未満で、かつ現在の枠に来たことのあるユーザーのみです(過去の枠は不可)
 
-    - 自分自身を`/ban`の対象にすることはできません
+    - 自分自身を`@ban`の対象にすることはできません
 
     </details>
 
@@ -395,7 +417,7 @@
 <p>Q. いつまで配信しますか</p>
 <p>A. 現時点では24時間365日配信しています。</p>
 <p>Q. ユーザー名の漢字の読み方がおかしいです</p>
-<p>A. <code>/nickname</code>コマンドで呼び名を設定できます。例えば<code>/nickname うさぎちゃん</code>とすると、<code>うさぎちゃん</code>と呼ばれるようになります。</p>
+<p>A. <code>@nickname</code>コマンドで呼び名を設定できます。例えば<code>@nickname うさぎちゃん</code>とすると、<code>うさぎちゃん</code>と呼ばれるようになります。</p>
 <p>Q. 回答が<code>ERROR</code>となる条件は何ですか</p>
 <p>A. AIの内部でエラーが発生したときに<code>ERROR</code>と表示されます。時間をおいて同じ質問をすると正しい回答が得られる場合があります。</p>
 <p>Q. 突然喋らなくなるときがありますが、なぜですか</p>
@@ -414,10 +436,9 @@
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
 
-                        <a rel="next" href="release_notes.html" class="mobile-nav-chapters next"
-                            title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                            <i class="fa fa-angle-right"></i>
-                        </a>
+                            <a rel="next prefetch" href="release_notes.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -426,14 +447,18 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
 
-                <a rel="next" href="release_notes.html" class="nav-chapters next" title="Next chapter"
-                    aria-label="Next chapter" aria-keyshortcuts="Right">
-                    <i class="fa fa-angle-right"></i>
-                </a>
+                    <a rel="next prefetch" href="release_notes.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
             </nav>
 
         </div>
 
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
 
 
 
@@ -442,18 +467,18 @@
         </script>
 
 
-        <script src="elasticlunr.min.js"></script>
-        <script src="mark.min.js"></script>
-        <script src="searcher.js"></script>
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-c2a407aa.js"></script>
 
-        <script src="clipboard.min.js"></script>
-        <script src="highlight.js"></script>
-        <script src="book.js"></script>
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-df8ccafc.js"></script>
 
         <!-- Custom JS scripts -->
 
 
-    </div>
-</body>
 
+    </div>
+    </body>
 </html>
