@@ -848,7 +848,7 @@ aria-label="Show hidden lines"></button>';
     "use strict";
 
     window.addEventListener('load', () => {
-        const isTinoZinkoStatusError = true;
+        const isTinoZinkoStatusError = false;
 
         const placeholder = document.querySelector('#tino_zinko_status');
         if (!isTinoZinkoStatusError) {
